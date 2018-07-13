@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+
+    
+
+    
+
+    <title>SpringMVC概述 | HelloCode</title>
+    <meta name="author" content="黄X" />
+    <meta name="version" content="1.0.0" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="ssm框架概述
+简介SSM（Spring+SpringMVC+MyBatis）框架集由Spring、SpringMVC、MyBatis三个开源框架整合而成，常作为数据源较简单的web项目的框架。
+Spring一个轻量级的控制反转（IOC）和面向切面（AOP）的容器框架
+SpringMVC分离了控制器、模型对象、分派器以及处理程序对象的角色，这种分离让它们更容易进行定制
+MyBatis一个支持普通SQL查询，存储过程和高级映射的优秀持久层框架
+MVC设计思想表现层：html + css + jqu" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta name="baidu-site-verification" content="F0CXvmUgA9" />
+
+    
+    
+    <link rel="icon" href="/favicon.png">
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="app">
+        <header class="header clearfix">
+    <div id="nav" class="nav">
+    <button id="open-panel" class="open-panel"><i class="icon-library"></i></button>
+
+    <nav class="nav-inner">
+
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/categories/front-end">前端</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/categories/back-end">后端</a>
+        </li>
+        
+        
+        
+        <li class="nav-item nav-item-tag">
+            <a id="nav-tag" class="nav-link" href="#">标签</a>
+            <div id="nav-tags" class="nav-tag-wrap">
+                <i class="nav-tag-arrow"></i>
+                
+  <div class="widget-wrap">
+    <h3 class="widget-title">
+        <i class="icon-tag vm"></i>
+        <span class="vm">标签</span>
+    </h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeJs笔记/">NodeJs笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringMVC概述/">SpringMVC概述</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringMVC笔记/">SpringMVC笔记</a></li></ul>
+    </div>
+  </div>
+
+
+            </div>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/archives">归档</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/atom.xml">订阅</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/categories/about">关于</a>
+        </li>
+        
+        
+        
+
+    </nav>
+</div>
+
+    <aside id="aside" class="aside">
+    <div id="aside-mask" class="aside-mask"></div>
+    <div id="aside-inner" class="aside-inner">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://hellowordcode.github.io"></form>
+
+        
+        
+        
+        
+
+        
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#ssm框架概述"><span class="toc-number">1.</span> <span class="toc-text">ssm框架概述</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#简介"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Spring"><span class="toc-number">1.2.</span> <span class="toc-text">Spring</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#SpringMVC"><span class="toc-number">1.3.</span> <span class="toc-text">SpringMVC</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#MyBatis"><span class="toc-number">1.4.</span> <span class="toc-text">MyBatis</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#MVC设计思想"><span class="toc-number">1.5.</span> <span class="toc-text">MVC设计思想</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建Maven工程"><span class="toc-number">2.</span> <span class="toc-text">创建Maven工程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#新建项目"><span class="toc-number">2.1.</span> <span class="toc-text">新建项目</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#选择Maven工程"><span class="toc-number">2.2.</span> <span class="toc-text">选择Maven工程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#勾选创建一个简单的工程"><span class="toc-number">2.3.</span> <span class="toc-text">勾选创建一个简单的工程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#填写必要的内容"><span class="toc-number">2.4.</span> <span class="toc-text">填写必要的内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#解决报错问题（生成web-xml文件）"><span class="toc-number">2.5.</span> <span class="toc-text">解决报错问题（生成web.xml文件）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#指定tomcat运行"><span class="toc-number">2.6.</span> <span class="toc-text">指定tomcat运行</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#导入-springMVC-jar包"><span class="toc-number">3.</span> <span class="toc-text">导入 springMVC jar包</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#导包方式"><span class="toc-number">3.1.</span> <span class="toc-text">导包方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#jar版本"><span class="toc-number">3.2.</span> <span class="toc-text">jar版本</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#选择导包界面"><span class="toc-number">3.3.</span> <span class="toc-text">选择导包界面</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#spring-webmvc"><span class="toc-number">3.4.</span> <span class="toc-text">spring-webmvc</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#保存配置"><span class="toc-number">3.5.</span> <span class="toc-text">保存配置</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#导入-spring-jar包"><span class="toc-number">4.</span> <span class="toc-text">导入 spring jar包</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#spring-jdbc"><span class="toc-number">4.1.</span> <span class="toc-text">spring-jdbc</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#导入-mybatis-jar包"><span class="toc-number">5.</span> <span class="toc-text">导入 mybatis jar包</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#mybatis"><span class="toc-number">5.1.</span> <span class="toc-text">mybatis</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+
+</header>
+
+        <div id="content" class="content"><article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
+            SpringMVC概述
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="/2018/07/13/ssm框架概述/">
+    
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2018-07-13T15:28:27.000Z" itemprop="datePublished">2018-07-13</time>
+</a>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <a class="article-tag-link" href="/tags/SpringMVC概述/">SpringMVC概述</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        <h4 id="ssm框架概述"><a href="#ssm框架概述" class="headerlink" title="ssm框架概述"></a>ssm框架概述</h4><hr>
+<h5 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h5><p>SSM（Spring+SpringMVC+MyBatis）框架集由Spring、SpringMVC、MyBatis三个开源框架整合而成，常作为数据源较简单的web项目的框架。</p>
+<h5 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h5><p>一个轻量级的控制反转（IOC）和面向切面（AOP）的容器框架</p>
+<h5 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h5><p>分离了控制器、模型对象、分派器以及处理程序对象的角色，这种分离让它们更容易进行定制</p>
+<h5 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h5><p>一个支持普通SQL查询，存储过程和高级映射的优秀持久层框架</p>
+<h5 id="MVC设计思想"><a href="#MVC设计思想" class="headerlink" title="MVC设计思想"></a>MVC设计思想</h5><p>表现层：html + css + jquery + ajax<br>控制层：springmvc<br>业务层：service组件<br>持久层：dao组件</p>
+<h4 id="创建Maven工程"><a href="#创建Maven工程" class="headerlink" title="创建Maven工程"></a>创建Maven工程</h4><hr>
+<h5 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h5><p><img src="http://java.javaex.cn/201802012249.png" alt="img"></p>
+<h5 id="选择Maven工程"><a href="#选择Maven工程" class="headerlink" title="选择Maven工程"></a>选择Maven工程</h5><p><img src="http://java.javaex.cn/201802012250.png" alt="img"></p>
+<h5 id="勾选创建一个简单的工程"><a href="#勾选创建一个简单的工程" class="headerlink" title="勾选创建一个简单的工程"></a>勾选创建一个简单的工程</h5><p><img src="http://java.javaex.cn/201802012251.png" alt="img"></p>
+<h5 id="填写必要的内容"><a href="#填写必要的内容" class="headerlink" title="填写必要的内容"></a>填写必要的内容</h5><p>关于　Group Id 和 Artifact Id 到底应该填什么，众说纷纭<br>比较靠谱的说法是：Group Id 和 Artifact Id 被统称为“坐标”，是为了保证项目唯一性而提出的，如果你要把你项目弄到maven本地仓库去，你想要找到你的项目就必须根据这两个id去查找<br>一般来讲，我们在 Group Id 栏填写域名的反写，Artifact Id 栏填写项目名<br>我们要部署并运行项目，所以Packaging（打包方式）这边选择war包<br><img src="http://java.javaex.cn/201802012253.png" alt="img"></p>
+<h5 id="解决报错问题（生成web-xml文件）"><a href="#解决报错问题（生成web-xml文件）" class="headerlink" title="解决报错问题（生成web.xml文件）"></a>解决报错问题（生成web.xml文件）</h5><p><img src="http://java.javaex.cn/201802012254.png" alt="img"></p>
+<h5 id="指定tomcat运行"><a href="#指定tomcat运行" class="headerlink" title="指定tomcat运行"></a>指定tomcat运行</h5><p><img src="http://java.javaex.cn/2018-02-01_234600.png" alt="img"><br><img src="http://java.javaex.cn/2018-02-01_234841.png" alt="img"></p>
+<h4 id="导入-springMVC-jar包"><a href="#导入-springMVC-jar包" class="headerlink" title="导入 springMVC jar包"></a>导入 springMVC jar包</h4><hr>
+<h5 id="导包方式"><a href="#导包方式" class="headerlink" title="导包方式"></a>导包方式</h5><p>导包方式有2种：一种是eclipse直接选择或下载jar包，自动生成xml配置<br>另一种是复制粘贴xml配置，自动下载jar包<br>我们这边选择第一种，手动选择jar包，让它自动生成xml配置</p>
+<h5 id="jar版本"><a href="#jar版本" class="headerlink" title="jar版本"></a>jar版本</h5><p>jar版本根据实际需求酌情选择，这里只做演示用</p>
+<h5 id="选择导包界面"><a href="#选择导包界面" class="headerlink" title="选择导包界面"></a>选择导包界面</h5><p><img src="http://java.javaex.cn/2018-02-01_231228.png" alt="img"></p>
+<h5 id="spring-webmvc"><a href="#spring-webmvc" class="headerlink" title="spring-webmvc"></a>spring-webmvc</h5><p>点击Add按钮，弹出窗口中搜索 spring-webmvc，选择图例中的jar包<br><img src="http://java.javaex.cn/2018-02-01_232506.png" alt="img"><br>这里以版本 3.2.8 为例<br><img src="http://java.javaex.cn/2018-02-01_232600.png" alt="img"><br>选择后，jar包就被添加进来了<br><img src="http://java.javaex.cn/2018-02-01_232627.png" alt="img"><br>切换到 pom.xml 选项卡，可以发现，jar包对应的xml配置已经自动生成了<br><img src="http://java.javaex.cn/2018-02-01_232650.png" alt="img"></p>
+<h5 id="保存配置"><a href="#保存配置" class="headerlink" title="保存配置"></a>保存配置</h5><p>选择jar包后，一定要按 Ctrl + S 对 pom.xml 文件进行保存<br>然后 Maven 下就会自动添加jar包进去<br><img src="http://java.javaex.cn/2018-02-01_235452.png" alt="img"></p>
+<h4 id="导入-spring-jar包"><a href="#导入-spring-jar包" class="headerlink" title="导入 spring jar包"></a>导入 spring jar包</h4><hr>
+<h5 id="spring-jdbc"><a href="#spring-jdbc" class="headerlink" title="spring-jdbc"></a>spring-jdbc</h5><p>用于事务控制</p>
+<p><img src="http://java.javaex.cn/2018-02-02_221122.png" alt="img"><br><img src="http://java.javaex.cn/2018-02-02_221136.png" alt="img"></p>
+<h4 id="导入-mybatis-jar包"><a href="#导入-mybatis-jar包" class="headerlink" title="导入 mybatis jar包"></a>导入 mybatis jar包</h4><hr>
+<h5 id="mybatis"><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h5><p><img src="http://java.javaex.cn/2018-02-02_211458.png" alt="img"></p>
+
+        
+
+    </section>
+</article>
+
+
+
+<div class="comments">
+    <div id="disqus_thread">
+        <p class="comment-tips">国内查看评论需要代理~</p>
+    </div>
+    <script>
+    window.disqus_config = function () {
+        this.language = 'zh';
+        this.page.url = 'http://hellowordcode.github.io/2018/07/13/ssm框架概述/';
+        this.page.title = 'SpringMVC概述';
+        this.page.identifier = '2018/07/13/ssm框架概述/';
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://name.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</div>
+        <footer class="footer">
+       
+    <! -- 添加捐赠图标 -->
+<div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
+        <span class="donate_txt">
+           &uarr;<br>
+		   欣赏此文？求鼓励，求支持！
+        </span>
+        <br>
+      </div>  
+	<div id="donate_guide" class="donate_bar center hidden" >
+		<!-- 支付宝打赏图案 -->
+		<img src="https://i.imgur.com/3mm81P3.jpg" alt="支付宝打赏"> 
+		<!-- 微信打赏图案 -->
+		<img src="https://i.imgur.com/nqMznnp.jpg" alt="微信打赏">  
+    </div>
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function(){
+			$('#donate_board').addClass('hidden');
+			$('#donate_guide').removeClass('hidden');
+		}
+	</script>
+</div>
+<! -- 添加捐赠图标 -->
+
+</footer>
+
+<script type="text/javascript" src="//s19.cnzz.com/z_stat.php?id=1274178791&amp;web_id=1274178791"></script>
+
+
+    </div>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+            var nodes = {
+                nav: $('#nav'),
+                aside: $('#aside'),
+                navTags: $('#nav-tags')
+            };
+
+            $('#open-panel, #aside-mask').on('click', function() {
+                nodes.aside.toggleClass('panel-show');
+            });
+            $('#nav-tag').on('click', function(event) {
+                event.preventDefault();console.log(nodes.navTags.attr('class'))
+                nodes.navTags.toggleClass('tag-show');console.log(nodes.navTags.attr('class'))
+            })/*.hover(function() {
+                nodes.navTags.addClass('tag-show');
+            }, function() {
+                nodes.navTags.removeClass('tag-show');
+            });*/
+
+            
+            $(document.body).scrollspy({target: '#aside-inner'});
+            
+        });
+    </script>
+
+</body>
+</html>
