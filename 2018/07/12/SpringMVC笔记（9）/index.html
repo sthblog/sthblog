@@ -167,8 +167,25 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span></span><br><span class="line">    pageEncoding=<span class="string">"UTF-8"</span>%&gt;</span><br><span class="line">&lt;%@ taglib uri=<span class="string">"http://java.sun.com/jsp/jstl/core"</span> prefix=<span class="string">"c"</span> %&gt;</span><br><span class="line">&lt;%@ taglib uri=<span class="string">"http://java.sun.com/jsp/jstl/fmt"</span>  prefix=<span class="string">"fmt"</span>%&gt;</span><br><span class="line">&lt;!DOCTYPE html PUBLIC <span class="string">"-//W3C//DTD HTML 4.01 Transitional//EN"</span> <span class="string">"http://www.w3.org/TR/html4/loose.dtd"</span>&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span><br><span class="line">&lt;title&gt;查询商品列表&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt; </span><br><span class="line">&lt;form action=<span class="string">"$&#123;pageContext.request.contextPath &#125;/item/queryItem.action"</span> method=<span class="string">"post"</span>&gt;</span><br><span class="line">查询条件：</span><br><span class="line">&lt;table width=<span class="string">"100%"</span> border=<span class="number">1</span>&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">&lt;td&gt;&lt;input type="submit" value="查询"/&gt;&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br><span class="line">商品列表：</span><br><span class="line">&lt;table width=<span class="string">"100%"</span> border=<span class="number">1</span>&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">    &lt;td&gt;商品名称&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;商品价格&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;生产日期&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;商品描述&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;操作&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;c:forEach items=<span class="string">"$&#123;itemsList &#125;"</span> var=<span class="string">"item"</span>&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">    &lt;td&gt;$&#123;item.name &#125;&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;$&#123;item.price &#125;&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;&lt;fmt:formatDate value="$&#123;item.createtime&#125;" pattern="yyyy-MM-dd HH:mm:ss"/&gt;&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;$&#123;item.detail &#125;&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;&lt;a href="$&#123;pageContext.request.contextPath &#125;/item/editItem.action?id=$&#123;item.id&#125;"&gt;修改&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;/c:forEach&gt;</span><br><span class="line">&lt;/table&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 <p>## </p>
 
-        
+    
+        <div id="SOHUCS" sid="SpringMVC笔记（9）" style="padding: 0px 30px 0px 46px;"></div>
+        <script>
+   (function(){
+    var appid = 'cytIjLzwd',
+    conf = '3a267b57b47a92bdd8410d022d231462';
+    var doc = document,
+    s = doc.createElement('script'),
+    h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+    s.type = 'text/javascript';
+    s.charset = 'utf-8';
+    s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+    h.insertBefore(s,h.firstChild);
+    window.SCS_NO_IFRAME = true;
+  })()
+</script>    
 
+        
+      
     </section>
 </article>
 
