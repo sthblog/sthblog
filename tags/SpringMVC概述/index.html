@@ -1,269 +1,374 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8" />
-
     
 
     
 
-    <title>Tag: SpringMVC概述 | HelloCode</title>
-    <meta name="author" content="黄X" />
-    <meta name="version" content="1.0.0" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="blogs" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-    <meta name="baidu-site-verification" content="F0CXvmUgA9" />
-
-    
-    
-    <link rel="icon" href="/favicon.png">
     
 
-    <link rel="stylesheet" href="/css/style.css">
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Tags: SpringMVC概述 | HelloCode | 欢迎来到一条狗的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="blogs">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HelloCode">
+<meta property="og:url" content="http://hellowordcode.github.io/tags/SpringMVC概述/index.html">
+<meta property="og:site_name" content="HelloCode">
+<meta property="og:description" content="blogs">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HelloCode">
+<meta name="twitter:description" content="blogs">
+    
+        <link rel="alternate" type="application/atom+xml" title="HelloCode" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
+
 <body>
+    <div id="loading" class="active"></div>
 
-    <div class="app">
-        <header class="header clearfix">
-    <div id="nav" class="nav">
-    <button id="open-panel" class="open-panel"><i class="icon-library"></i></button>
-
-    <nav class="nav-inner">
-
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">狗੯ੁ‧̀͡u\</h5>
+          <a href="mailto:1017504510@qq.com" title="1017504510@qq.com" class="mail">1017504510@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
         
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
         
-        <li class="nav-item">
-            <a class="nav-link" href="/">首页</a>
-        </li>
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                时间表
+              </a>
+            </li>
         
+            <li class="waves-block waves-effect active">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
         
-        <li class="nav-item">
-            <a class="nav-link" href="/categories/front-end">前端</a>
-        </li>
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/hellowordcode" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
         
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/hellowordcode" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/wechat" target="_blank" >
+                <i class="icon icon-lg icon-wechat"></i>
+                Wechat
+              </a>
+            </li>
         
-        <li class="nav-item">
-            <a class="nav-link" href="/categories/back-end">后端</a>
-        </li>
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于我一条狗的简介
+              </a>
+            </li>
         
-        
-        
-        <li class="nav-item nav-item-tag">
-            <a id="nav-tag" class="nav-link" href="#">标签</a>
-            <div id="nav-tags" class="nav-tag-wrap">
-                <i class="nav-tag-arrow"></i>
-                
-  <div class="widget-wrap">
-    <h3 class="widget-title">
-        <i class="icon-tag vm"></i>
-        <span class="vm">标签</span>
-    </h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeJs笔记/">NodeJs笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringMVC概述/">SpringMVC概述</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringMVC笔记/">SpringMVC笔记</a></li></ul>
+      </ul>
     </div>
   </div>
+</aside>
 
-
-            </div>
-        </li>
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Tags: SpringMVC概述</div>
         
-        
-        
-        <li class="nav-item">
-            <a class="nav-link" href="/archives">归档</a>
-        </li>
-        
-        
-        
-        <li class="nav-item">
-            <a class="nav-link" href="/atom.xml">订阅</a>
-        </li>
-        
-        
-        
-        <li class="nav-item">
-            <a class="nav-link" href="/about">关于</a>
-        </li>
-        
-        
-        
-
-    </nav>
-</div>
-
-    <aside id="aside" class="aside">
-    <div id="aside-mask" class="aside-mask"></div>
-    <div id="aside-inner" class="aside-inner">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://hellowordcode.github.io"></form>
-
-        
-        
-
-        
-        <div class="author-meta">
-            
-            <div class="author-avatar">
-                <a href="/">
-                    <img src="/images/avatar.jpg" title="Sanonz">
-                </a>
-            </div>
-            
-            <div class="author-name">狗੯ੁ‧̀͡u\</div>
-            <div class="author-work">Java Engineer biuiubiu~</div>
-            <div class="author-location">
-                <i class="icon-location vm"></i>
-                <span class="vm">Shenzhen, China</span>
-            </div>
-            
-            <div class="author-thread-wrap">
-                <div class="author-threads clearfix">
-                    
-                    <a class="thread-item" href="https://github.com/hellowordcode" target="_blank" rel="noopener"><i class="icon-github"></i></a>
-                    
-                    
-                    <a class="thread-item" href="https://github.com/hellowordcode" target="_blank" rel="noopener"><i class="icon-circle-more"></i></a>
-                    
-                    
-                    <a class="thread-item" href="https://twitter.com/sanonze" target="_blank" rel="noopener"><i class="icon-twitter"></i></a>
-                    
-                </div>
-            </div>
-            
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
         </div>
         
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
     </div>
-</aside>
+</header>
+<header class="content-header tags-header">
+
+    <div class="container fade-scale">
+        <h1 class="title"></h1>
+        <h5 class="subtitle">
+            
+        </h5>
+    </div>
+
+    
+<div class="tabs-bar container">
+    <nav class="tags-list">
+        <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
+            ">全部</a>
+        
+
+            <a href="/tags/NodeJs笔记/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">NodeJs笔记</a>
+
+        
+
+            <a href="/tags/SpringMVC笔记/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">SpringMVC笔记</a>
+
+        
+
+            <a href="/tags/SpringMVC概述/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">SpringMVC概述</a>
+
+        
+    </nav>
+    <!-- PC show more-->
+    <div class="tags-list-more">
+        <a href="javascript:;" onclick="BLOG.tabBar(this)" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+    </div>
+</div>
+
+
 
 </header>
 
-        <div id="content" class="content">
-    <article class="article" itemscope itemprop="blogPost">
+<div class="container body-wrap fade">
     
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2018/07/13/ssm框架概述/">SpringMVC概述</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="/2018/07/13/ssm框架概述/">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2018-07-13T15:28:27.000Z" itemprop="datePublished">2018-07-13</time>
-</a>
-
+            <div class="waterfall">
+           
+          
             
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/SpringMVC概述/">SpringMVC概述</a>
-</div>
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2018-07-13 23:28:27" datetime="2018-07-13T15:28:27.000Z"  itemprop="datePublished">2018-07-13</time>
 
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <h4 id="ssm框架概述"><a href="#ssm框架概述" class="headerlink" title="ssm框架概述"></a>ssm框架概述</h4><hr>
-<h5 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h5><p>SSM（Spring+SpringMVC+MyBatis）框架集由Spring、SpringMVC、MyBatis三个开源框架整合而成，常作为数据源较简单的web项目的框架。</p>
-<h5 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h5><p>一个轻量级的控制反转（IOC）和面向切面（AOP）的容器框架</p>
-<h5 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h5><p>分离了控制器、模型对象、分派器以及处理程序对象的角色，这种分离让它们更容易进行定制</p>
-<h5 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h5><p>一个支持普通SQL查询，存储过程和高级映射的优秀持久层框架</p>
-<h5 id="MVC设计思想"><a href="#MVC设计思想" class="headerlink" title="MVC设计思想"></a>MVC设计思想</h5><p>表现层：html + css + jquery + ajax<br>控制层：springmvc<br>业务层：service组件<br>持久层：dao组件</p>
-<h4 id="创建Maven工程"><a href="#创建Maven工程" class="headerlink" title="创建Maven工程"></a>创建Maven工程</h4><hr>
-<h5 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h5><p><img src="http://java.javaex.cn/201802012249.png" alt="img"></p>
-<h5 id="选择Maven工程"><a href="#选择Maven工程" class="headerlink" title="选择Maven工程"></a>选择Maven工程</h5><p><img src="http://java.javaex.cn/201802012250.png" alt="img"></p>
-<h5 id="勾选创建一个简单的工程"><a href="#勾选创建一个简单的工程" class="headerlink" title="勾选创建一个简单的工程"></a>勾选创建一个简单的工程</h5><p><img src="http://java.javaex.cn/201802012251.png" alt="img"></p>
-<h5 id="填写必要的内容"><a href="#填写必要的内容" class="headerlink" title="填写必要的内容"></a>填写必要的内容</h5><p>关于　Group Id 和 Artifact Id 到底应该填什么，众说纷纭<br>比较靠谱的说法是：Group Id 和 Artifact Id 被统称为“坐标”，是为了保证项目唯一性而提出的，如果你要把你项目弄到maven本地仓库去，你想要找到你的项目就必须根据这两个id去查找<br>一般来讲，我们在 Group Id 栏填写域名的反写，Artifact Id 栏填写项目名<br>我们要部署并运行项目，所以Packaging（打包方式）这边选择war包<br><img src="http://java.javaex.cn/201802012253.png" alt="img"></p>
-<h5 id="解决报错问题（生成web-xml文件）"><a href="#解决报错问题（生成web-xml文件）" class="headerlink" title="解决报错问题（生成web.xml文件）"></a>解决报错问题（生成web.xml文件）</h5><p><img src="http://java.javaex.cn/201802012254.png" alt="img"></p>
-<h5 id="指定tomcat运行"><a href="#指定tomcat运行" class="headerlink" title="指定tomcat运行"></a>指定tomcat运行</h5><p><img src="http://java.javaex.cn/2018-02-01_234600.png" alt="img"><br><img src="http://java.javaex.cn/2018-02-01_234841.png" alt="img"></p>
-<h4 id="导入-springMVC-jar包"><a href="#导入-springMVC-jar包" class="headerlink" title="导入 springMVC jar包"></a>导入 springMVC jar包</h4><hr>
-<h5 id="导包方式"><a href="#导包方式" class="headerlink" title="导包方式"></a>导包方式</h5><p>导包方式有2种：一种是eclipse直接选择或下载jar包，自动生成xml配置<br>另一种是复制粘贴xml配置，自动下载jar包<br>我们这边选择第一种，手动选择jar包，让它自动生成xml配置</p>
-<h5 id="jar版本"><a href="#jar版本" class="headerlink" title="jar版本"></a>jar版本</h5><p>jar版本根据实际需求酌情选择，这里只做演示用</p>
-<h5 id="选择导包界面"><a href="#选择导包界面" class="headerlink" title="选择导包界面"></a>选择导包界面</h5><p><img src="http://java.javaex.cn/2018-02-01_231228.png" alt="img"></p>
-<h5 id="spring-webmvc"><a href="#spring-webmvc" class="headerlink" title="spring-webmvc"></a>spring-webmvc</h5><p>点击Add按钮，弹出窗口中搜索 spring-webmvc，选择图例中的jar包<br><img src="http://java.javaex.cn/2018-02-01_232506.png" alt="img"><br>这里以版本 3.2.8 为例<br><img src="http://java.javaex.cn/2018-02-01_232600.png" alt="img"><br>选择后，jar包就被添加进来了<br><img src="http://java.javaex.cn/2018-02-01_232627.png" alt="img"><br>切换到 pom.xml 选项卡，可以发现，jar包对应的xml配置已经自动生成了<br><img src="http://java.javaex.cn/2018-02-01_232650.png" alt="img"></p>
-<h5 id="保存配置"><a href="#保存配置" class="headerlink" title="保存配置"></a>保存配置</h5><p>选择jar包后，一定要按 Ctrl + S 对 pom.xml 文件进行保存<br>然后 Maven 下就会自动添加jar包进去<br><img src="http://java.javaex.cn/2018-02-01_235452.png" alt="img"></p>
-<h4 id="导入-spring-jar包"><a href="#导入-spring-jar包" class="headerlink" title="导入 spring jar包"></a>导入 spring jar包</h4><hr>
-<h5 id="spring-jdbc"><a href="#spring-jdbc" class="headerlink" title="spring-jdbc"></a>spring-jdbc</h5><p>用于事务控制</p>
-<p><img src="http://java.javaex.cn/2018-02-02_221122.png" alt="img"><br><img src="http://java.javaex.cn/2018-02-02_221136.png" alt="img"></p>
-<h4 id="导入-mybatis-jar包"><a href="#导入-mybatis-jar包" class="headerlink" title="导入 mybatis jar包"></a>导入 mybatis jar包</h4><hr>
-<h5 id="mybatis"><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h5><p><img src="http://java.javaex.cn/2018-02-02_211458.png" alt="img"></p>
-
-
-        
       
-    </section>
-</article>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/后端/">后端</a></li></ul>
 
 
 
-
-
-</div>
-        <footer class="footer">
-       
-    <! -- 添加捐赠图标 -->
-<div class ="post-donate">
-    <div id="donate_board" class="donate_bar center">
-        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
-        <span class="donate_txt">
-           &uarr;<br>
-		   如果喜欢喂狗粮~爱你么么哒~
-        </span>
-        <br>
-      </div>  
-	<div id="donate_guide" class="donate_bar center hidden" >
-		<!-- 支付宝打赏图案 -->
-		<img src="/images/S80713-23274421.jpg" alt="支付宝打赏"> 
-		<!-- 微信打赏图案 -->
-		<img src="/images/S80713-23284120.jpg" alt="微信打赏">  
     </div>
-	<script type="text/javascript">
-		document.getElementById('btn_donate').onclick = function(){
-			$('#donate_board').addClass('hidden');
-			$('#donate_guide').removeClass('hidden');
-		}
-	</script>
-</div>
-<! -- 添加捐赠图标 -->
+    
 
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/07/13/ssm框架概述/">SpringMVC概述</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringMVC概述/">SpringMVC概述</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+        
+            </div>
+        
+    
+</div>
+
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>狗੯ੁ‧̀͡u\ &copy; 2015 - 2018</span>
+            <span>
+                
+              本博客搭建使用Hexo开源框架,使用<a helf="https://github.com/yscoder">yscoder</a>的主题文件
+            </span>
+        </p>
+    </div>
 </footer>
 
-<script type="text/javascript" src="//s19.cnzz.com/z_stat.php?id=1274178791&amp;web_id=1274178791"></script>
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
-    </div>
 
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
-    
-    <script type="text/javascript">
-        $(function() {
-            var nodes = {
-                nav: $('#nav'),
-                aside: $('#aside'),
-                navTags: $('#nav-tags')
-            };
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://hellowordcode.github.io/tags/SpringMVC概述/&title=HelloCode&pic=http://hellowordcode.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hellowordcode.github.io/tags/SpringMVC概述/&title=HelloCode&source=blogs" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://hellowordcode.github.io/tags/SpringMVC概述/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=HelloCode&url=http://hellowordcode.github.io/tags/SpringMVC概述/&via=http://hellowordcode.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://hellowordcode.github.io/tags/SpringMVC概述/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
 
-            $('#open-panel, #aside-mask').on('click', function() {
-                nodes.aside.toggleClass('panel-show');
-            });
-            $('#nav-tag').on('click', function(event) {
-                event.preventDefault();console.log(nodes.navTags.attr('class'))
-                nodes.navTags.toggleClass('tag-show');console.log(nodes.navTags.attr('class'))
-            })/*.hover(function() {
-                nodes.navTags.addClass('tag-show');
-            }, function() {
-                nodes.navTags.removeClass('tag-show');
-            });*/
 
-            
-        });
-    </script>
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://hellowordcode.github.io/tags/SpringMVC概述/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
 
 </body>
 </html>
