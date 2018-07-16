@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/8bd73269.js","daovoice")</script>
 <head>
     
 
@@ -219,7 +220,7 @@
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-SpringMVC笔记（4）"
+            <article id="post-SpringMVC笔记（3）"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -237,7 +238,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/12/SpringMVC笔记（4）/">SpringMVC笔记（4）</a>
+      <a class="post-title-link" href="/2018/07/12/SpringMVC笔记（3）/">SpringMVC笔记（3）</a>
     </h3>
   
 
@@ -247,12 +248,10 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        注解的处理器映射器和适配器版本配置在spring3.1之前使用
-org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping注解映射器。
-在spring3.1之后使用org.springframework.web.servlet.mvc.method.annotation.RequestMappi...
+        非注解的处理器映射器和适配器非注解的处理器映射器123456789101112131415161718&lt;!-- 配置Handler --&gt;&lt;bean id="itemsController" name="/queryItems.action" class="com.iot.ssm.controller.ItemsController"/&gt;&lt;!-- 处理器映射器将...
     
 
-        <a href="/2018/07/12/SpringMVC笔记（4）/" class="post-more waves-effect waves-button">
+        <a href="/2018/07/12/SpringMVC笔记（3）/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>
@@ -268,7 +267,7 @@ org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping�
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-SpringMVC笔记（1）"
+            <article id="post-SpringMVC笔记（2）"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -286,7 +285,7 @@ org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping�
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/12/SpringMVC笔记（1）/">SpringMVC笔记（1）</a>
+      <a class="post-title-link" href="/2018/07/12/SpringMVC笔记（2）/">SpringMVC笔记（2）</a>
     </h3>
   
 
@@ -296,18 +295,11 @@ org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping�
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        SpringMVC操作笔记SpringMVC基础知识介绍###SpringMVC功能部件
-
-
-组件及其作用
-
-前端控制器(DispatcherServlet)：接收请求，响应结果，相当于转发器，中央处理器。减少了其他组件之间的耦合度
-处理器映射器(HandlerMapping)：根据请求的url查找Handler
-Handler处理器：按照HandlerAdapter的要求编写
-处理器适配器...
+        SpringMVC(MAVEN工程创建)IDEA创建过程①创建MAVEN（web工程）new-&gt;project-&gt;maven，建一个裸的maven工程
+②添加依赖（pom.xml文件）123456789&lt;dependency&gt;    &lt;groupId&gt;org.springframework&lt;/groupId&gt;    &lt;artifactId...
     
 
-        <a href="/2018/07/12/SpringMVC笔记（1）/" class="post-more waves-effect waves-button">
+        <a href="/2018/07/12/SpringMVC笔记（2）/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>
@@ -323,7 +315,7 @@ Handler处理器：按照HandlerAdapter的要求编写
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-SpringMVC笔记（6）"
+            <article id="post-SpringMVC笔记（5）"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -341,7 +333,7 @@ Handler处理器：按照HandlerAdapter的要求编写
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/12/SpringMVC笔记（6）/">SpringMVC笔记（6）</a>
+      <a class="post-title-link" href="/2018/07/12/SpringMVC笔记（5）/">SpringMVC笔记（5）</a>
     </h3>
   
 
@@ -351,13 +343,12 @@ Handler处理器：按照HandlerAdapter的要求编写
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        入门程序配置小结通过入门程序理解springmvc前端控制器、处理器映射器、处理器适配器、视图解析器用法。并附上入门程序的非注解的完整的配置文件，注解的完整配置文件。
-前端控制器配置：
-第一种：*.action，访问以.action结尾 由DispatcherServlet进行解析
-第二种：/，所以访问的地址都由DispatcherServlet进行解析，对于静态文件的解析需要配置不让Dis...
+        前端控制器1.前端控制器接收请求
+调用doDispatch方法
+12345protected void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception &#123;        HttpServletRequest processedRequest = request...
     
 
-        <a href="/2018/07/12/SpringMVC笔记（6）/" class="post-more waves-effect waves-button">
+        <a href="/2018/07/12/SpringMVC笔记（5）/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>
