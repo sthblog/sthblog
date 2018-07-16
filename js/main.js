@@ -504,9 +504,6 @@
         console.error('Waves loading failed.')
     }
 })(window, document);
-    daovoice('init', {
-  app_id: "8bd73269"
-});
-daovoice('update');
+
 
 
